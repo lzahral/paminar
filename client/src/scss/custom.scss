@@ -1,0 +1,32 @@
+$theme-colors: (
+    "primary": #8C2F37,
+    "secondary": #D9A4AE,
+    "light": #D8DAD9,
+    "info": #9CA6A5,
+    "dark": #222625,
+);
+
+
+$border-radius: 8px;
+
+$nav-pills-link-active-bg: #D9A4AE;
+$nav-pills-link-active-color: #D9A4AE !important;
+
+$position-values: (
+    0: 0,
+    50: 60px,
+    100: 100%
+);
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 2),
+  5: ($spacer * 6)
+), $spacers);
+
+@import "~bootstrap/scss/bootstrap";

@@ -1,0 +1,14 @@
+html,
+body {
+    background: #d8dad9;
+}
+
+*{
+    font-family:IRANYekan;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bs-body-bg: #d8dad9 !important;
+}
