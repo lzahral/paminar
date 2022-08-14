@@ -1,14 +1,4 @@
-@media screen and (max-width: 576px) {
-    .div {
-        margin: 10px;
-        margin-top: 20px;
-    }
-}
-@media screen and (min-width: 576px) {
-    .div {
-        margin: 150px 0;
-    }
-}
+
 @media screen and (max-width: 1200px) {
     .col {
         margin: 50px;
@@ -53,4 +43,8 @@
 .end-btn{
     border-radius: 45px 0 0 0 ;
     margin: 0;
+}
+
+.product:hover{
+    cursor: pointer;
 }

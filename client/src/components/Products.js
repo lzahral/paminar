@@ -1,20 +1,23 @@
-import React,{ useState, useEffect } from 'react';
-import Axios from 'axios';
+import React,{ useContext } from 'react';
 import Row from 'react-bootstrap/Row';
 
 import Product from './Product';
+import  { ProdouctsContext } from '../context/ProductContext';
 
-const Products = () => {
-    const [data, setData]=useState([])
 
-    useEffect(()=>{
-        Axios.get("http://localhost:3001/api/get")
-        .then((response)=> setData(response.data))
-    },[])
+const Products = (props) => {
+
+
+    const category = props.match.params.category;
+    const data = useContext(ProdouctsContext);
+    let product = data;
+    if(category!==undefined){
+        product= data.filter(item=>item.category === category);
+    }
 
     return (
         <Row xs={1} md={2} lg={4} >
-            {data.map(item=><Product key={item.id} data={item}/>)}
+            {product.length?product.map(item=><Product key={item.id} data={item} {...props}/>): <h1>loading..</h1>}
         </Row>
     );
 };

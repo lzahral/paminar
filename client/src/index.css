@@ -12,3 +12,14 @@ body {
 :root {
     --bs-body-bg: #d8dad9 !important;
 }
+@media screen and (max-width: 576px) {
+    .div {
+        margin: 10px;
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width: 576px) {
+    .div {
+        margin: 150px 0;
+    }
+}
